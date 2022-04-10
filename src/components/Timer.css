@@ -1,0 +1,39 @@
+.timer {
+  background-color: #ff3f3f;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-left: 5%;
+  width: 15%;
+  background-color: #fff1f1;
+  border: none;
+  color: #ff3f3f;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 75%;
+  border-radius: 5px;
+
+  font-weight: bold;
+
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #ff3f3f;
+  color: #fff1f1;
+}
