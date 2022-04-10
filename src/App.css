@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
+  background-color: #dad9d9;
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  transform: (0, 50%);
+  padding: 1px;
+  color: #dad9d9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  background-color: #ff3f3f;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: xx-large;
+  font-style: bold;
+  line-height: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.timer {
+  background-color: #ff3f3f;
+  color: #dad9d9;
+  padding-top: 14px;
+  padding-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+  font-style: bold;
+  margin-bottom: 0;
+}
+
+.form {
+  background-color: #cc5f5f;
+  font-size: 90%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.listForm {
+  width: 40%;
+  position: flex;
+  right: 25%;
+  transform: (-50%, 50%);
+  padding: 5px;
+  margin: 0;
+}
+
+label {
+  font-style: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.button {
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  position: flex;
+  width: 40%;
+  margin-top: 5%;
+}
+
+p {
+  margin: 0;
+  font-style: bold;
+}
+
+input[type="submit"] {
+  width: 70%;
+  justify-content: center;
+  background-color: #fff1f1;
+  border: none;
+  color: #ff3f3f;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 70%;
+  border-radius: 5px;
+
+  font-weight: bold;
+}
+
+input[type="text"] {
+  background-color: #fff1f1;
+  color: #302f2f;
+  margin-left: 50rem;
+  width: 40%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
