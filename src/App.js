@@ -4,21 +4,27 @@ import Timer from "./components/Timer";
 import "./App.css";
 
 const App = () => {
+  // Estados que recebem o conteúto de input=text
+  const [inputWorkTime, setInputWorkTime] = useState(workTime); // ciclo de trabalho
+  const [inputShortRest, setInputShortRest] = useState(shortRest); // descanto curto
+  const [inputLongRest, setInputLongRest] = useState(longRest); // descanso longo
+  const [inputNumberCicles, setInputNumberCicles] = useState(numberCicles); // número de ciclos
+
+  // Estados que recebem o valor de input=text após confirmação
   const [workTime, setWorkTime] = useState(25);
   const [shortRest, setShortRest] = useState(5);
   const [longRest, setLongRest] = useState(25);
   const [numberCicles, setNumberCicles] = useState(4);
+
+  // Estados auxiliares
   const [interval, setInterval] = useState(workTime);
   const [counter, setCounter] = useState(0);
   const [isResting, setIsResting] = useState(false);
-
-  const [inputWorkTime, setInputWorkTime] = useState(workTime);
-  const [inputShortRest, setInputShortRest] = useState(shortRest);
-  const [inputLongRest, setInputLongRest] = useState(longRest);
-  const [inputNumberCicles, setInputNumberCicles] = useState(numberCicles);
-
   const [nameInterval, setNameInterval] = useState("Ciclo de trabalho");
 
+  // Muda o valor do tempo (ou intervalo) a ser enviado para o temporizador além de
+  // já computar se o próximo tempo será de ciclo de trabalho, descanso curto ou
+  // descanso longo.
   const defineInterval = () => {
     if (isResting) {
       setInterval(workTime);
@@ -41,6 +47,9 @@ const App = () => {
     }
   };
 
+  // Repassa os valores recebidos das caixas de texto para os estados
+  // que serão utilizados no cálculo do tempo do temporizador. Além
+  // disso, inicializa o temporizador com o tempo de ciclo de trabalho
   const getNextInterval = () => {
     setWorkTime(inputWorkTime);
     setShortRest(inputShortRest);
@@ -73,7 +82,6 @@ const App = () => {
         <Timer onTimerEnd={defineInterval} interval={interval} />
       </div>
 
-      {/* Form */}
       <div className="form">
         <div className="listForm">
           <label>
@@ -83,7 +91,6 @@ const App = () => {
               value={inputWorkTime}
               onChange={(e) => setInputWorkTime(e.target.value)}
             />
-            {/* {workTime} */}
           </label>
           <label>
             Descanso Curto:
@@ -92,7 +99,6 @@ const App = () => {
               value={inputShortRest}
               onChange={(e) => setInputShortRest(e.target.value)}
             />
-            {/* {shortRest} */}
           </label>
           <label>
             Descanso Longo:
@@ -101,7 +107,6 @@ const App = () => {
               value={inputLongRest}
               onChange={(e) => setInputLongRest(e.target.value)}
             />
-            {/* {longRest} */}
           </label>
           <label>
             Quantidade de ciclos:
@@ -110,7 +115,6 @@ const App = () => {
               value={inputNumberCicles}
               onChange={(e) => setInputNumberCicles(e.target.value)}
             />
-            {/* {numberCicles} */}
           </label>
         </div>
 
