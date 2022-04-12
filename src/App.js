@@ -1,20 +1,19 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom/client";
 import Timer from "./components/Timer";
 import "./App.css";
 
 const App = () => {
-  // Estados que recebem o conteúto de input=text
-  const [inputWorkTime, setInputWorkTime] = useState(workTime); // ciclo de trabalho
-  const [inputShortRest, setInputShortRest] = useState(shortRest); // descanto curto
-  const [inputLongRest, setInputLongRest] = useState(longRest); // descanso longo
-  const [inputNumberCicles, setInputNumberCicles] = useState(numberCicles); // número de ciclos
-
   // Estados que recebem o valor de input=text após confirmação
   const [workTime, setWorkTime] = useState(25);
   const [shortRest, setShortRest] = useState(5);
   const [longRest, setLongRest] = useState(25);
   const [numberCicles, setNumberCicles] = useState(4);
+
+  // Estados que recebem o conteúto de input=text
+  const [inputWorkTime, setInputWorkTime] = useState(workTime); // ciclo de trabalho
+  const [inputShortRest, setInputShortRest] = useState(shortRest); // descanto curto
+  const [inputLongRest, setInputLongRest] = useState(longRest); // descanso longo
+  const [inputNumberCicles, setInputNumberCicles] = useState(numberCicles); // número de ciclos
 
   // Estados auxiliares
   const [interval, setInterval] = useState(workTime);
