@@ -67,9 +67,9 @@ const Timer = ({ onTimerEnd, interval }) => {
     <div className="timer">
       <h2>{formatTimeLeft()}</h2>
       <div className="buttons">
-        <button onClick={onClickStart}>Start</button>
-        <button onClick={onClickPause}>Pause</button>
-        <button onClick={onClickResume}>Resume</button>
+        <button onClick={onClickStart}>Começar</button>
+        <button onClick={onClickPause}>Pausar</button>
+        <button onClick={onClickResume}>Retomar</button>
       </div>
     </div>
   );
